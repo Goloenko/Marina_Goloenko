@@ -13,28 +13,94 @@
         <p>
             <strong> Простая форма поиска с вариантами:</strong>
         </p>
-                <form action="http://sc.it-academy.by/fe/form.php" method="post"> 
+                <form action="http://fe.it-academy.by/TestForm.php" method="post"> 
                 <fieldset>
                     <legend>Строка поиска</legend>
                     <label>                 
-                        <input type="text" maxlength="10" placeholder="не более 10 символов" >
-                        Искать
-                    </label>
+                        <input type="text" maxlength="10" placeholder="не более 10 символов"></label>
+                        <input type="submit" value="Искать">                <br>
+                <input type="radio" name="radio" value="radio1"> на сайте
+                <input type="radio" name="radio" value="radio2"> в google<br>
+                <em>Длина запроса не более 10 символов</em>               
+            </fieldset>                
+        </form>
+            </td>
+            <td>
+            <p>
+                <strong> Простая форма поиска с вариантами:</strong>
+            </p>
+        <form action="http://fe.it-academy.by/TestForm.php" method="post"> 
+                <fieldset>
+                    <legend>Строка поиска</legend> 
+                    <label>
+                        <input type="text" required autofocus>  <sup>∗</sup></label>
+                        <input type="submit" value="Искать">
                 <br>
                 <input type="radio" name="radio" value="radio1"> на сайте
                 <input type="radio" name="radio" value="radio2"> в google<br>
-                <em>Длина запроса не более 10 символов</em>
+                <em><sup>∗ - обязательное поле<br>
+                    Автофокус в поле поиска</sup></em>
             </fieldset>    
         </form>
-            </td>
-            <td>2</td>
         </tr>  
+    </td>
         <tr>
-            <td>3</td>
-            <td>4</td>
+            <td>
+                <p>
+                    <strong> Простая форма авторизации:</strong>
+                </p>
+            <form action="http://fe.it-academy.by/TestForm.php" method="post"> 
+                    <fieldset>
+                        <legend>Авторизируйтесь</legend>                         
+                            <input type="text" id="login" name="login" required> <sup>∗</sup> 
+                            <label for="login">Логин</label><br>                        
+                    <input type="password" id="pass" name="password" required>  <sup>∗</sup> 
+                    <label for="pass">Пароль</label><br>
+                    <input type="checkbox" name="check" value="check"> Оставаться в системе <br>        
+                <input type="submit" value="Войти"> <br> 
+                <em><sup>∗ - обязательное поле</sup></em>
+            </fieldset>  
+            </form>
+            </td>
+            <td>
+                <p>
+                    <strong>Опрос (голосование)</strong>
+                </p>
+            <form action="http://fe.it-academy.by/TestForm.php" method="post"> 
+                    <fieldset>
+                        <legend>Как вам?</legend>      
+                    <input type="hidden" name="date" value="2013.12.31">
+                        <input type="radio" name="radio" value="radio1"> ничего<br> 
+                        <input type="radio" name="radio" value="radio2"> неплохо<br>       
+                        <input type="radio" name="radio" value="radio3"> хорошо<br>
+                        <input type="radio" name="radio" value="radio4"> супер<br>                        
+                <input type="submit" value="Отправить"> <br> 
+                <em>Есть скрытое поле name=date_voite, value="2013.12.31"</em>
+            </fieldset>  
+            </form>
+            </td>
             </tr>  
         <tr>
-            <td>5</td>
+            <td>
+                <p>
+                    <strong>Отзыв</strong>
+                </p>
+                <form action="http://fe.it-academy.by/TestForm.php" method="post"> 
+                    <fieldset>
+                        <legend>Оставьте ваш отзыв</legend>                         
+                    <input type="text" id="login" name="login" method="POST" required> <sup>∗</sup> 
+                    <label for="login">Имя</label><br>                  
+                    <input type="email" id="email" name=“email” method="POST" placeholder="это обязательное поле" required pattern="/^[\w]{1}[\w-\.]*@[\w-]+\.[a-z]{2,4}$/i"> <sup>∗</sup>     
+                    <label for="email">e-mail</label><br>
+                    <textarea name="text" method="POST">Форма отправки</textarea><br>
+                <input type="submit" value="Отправить"> <br> 
+                <em><sup>∗ - обязательное поле<br>
+                    поле email - с проверкой <br>
+                    метод POST</sup></em>
+            </fieldset>  
+            </form>
+
+            </td>
             <td>6</td>
         </tr>  
         <tr>
